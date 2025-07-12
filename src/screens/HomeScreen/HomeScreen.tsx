@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -43,5 +43,9 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     flex1: {
         flex: 1,
+        ...(Platform.OS === "web" && {
+            width: 600,
+            alignSelf: "center",
+        }),
     }
 })

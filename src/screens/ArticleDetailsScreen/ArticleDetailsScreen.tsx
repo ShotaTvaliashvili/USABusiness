@@ -5,6 +5,7 @@ import {
   Dimensions,
   Image,
   Linking,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -62,6 +63,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    ...(Platform.OS === "web" && {
+      width: 700,
+      alignSelf: "center",
+      marginTop: 20,
+    }),
   },
   image: {
     width: width,
