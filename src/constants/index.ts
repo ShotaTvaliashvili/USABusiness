@@ -1,0 +1,1 @@
+export const US_BUSINESS_NEW = 'https://newsapi.org/v2/top-headlines?';

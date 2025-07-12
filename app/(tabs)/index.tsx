@@ -1,9 +1,3 @@
-import { StyleSheet } from 'react-native';
+import HomeScreen from '@/src/screens/HomeScreen/HomeScreen';
 
-
-export default function HomeScreen() {
-  return null;
-}
-
-const styles = StyleSheet.create({
-});
+export default HomeScreen;
