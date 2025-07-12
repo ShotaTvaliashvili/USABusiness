@@ -8,6 +8,7 @@ const  TabLayout = () => {
       screenOptions={{headerShown: false,}} 
     >
       <Tabs.Screen name="index" />
+      <Tabs.Screen name="articleDetails" />
     </Tabs>
   );
 }

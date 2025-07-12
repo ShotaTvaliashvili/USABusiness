@@ -13,6 +13,7 @@ const ArticlesDataContextProvider = ({children}: IArticlesDataContextProviderPro
         isRefreshing,
         isError, 
         keyword, 
+        onRetry,
         onRefresh,
         setKeywordCallback,
     } = useGetArticlesData();
@@ -24,6 +25,7 @@ const ArticlesDataContextProvider = ({children}: IArticlesDataContextProviderPro
         isRefreshing,
         isError, 
         keyword, 
+        onRetry,
         onRefresh,
         setKeywordCallback,
     }

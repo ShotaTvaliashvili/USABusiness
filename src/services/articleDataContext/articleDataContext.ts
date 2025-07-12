@@ -7,6 +7,7 @@ export interface IArticlesDataContext {
     isError: boolean; 
     keyword: string, 
     onRefresh: () => Promise<void>;
+    onRetry: () => Promise<void>;
     setKeywordCallback: (val: string) => void;
 }
 
@@ -17,6 +18,7 @@ const ArticlesDataContext = createContext<IArticlesDataContext>({
     isError: false, 
     keyword: '', 
     onRefresh: async () => {},
+    onRetry: async () => {},
     setKeywordCallback: () => {},
 })
 

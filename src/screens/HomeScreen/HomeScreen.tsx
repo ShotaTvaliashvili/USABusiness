@@ -1,14 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import ArticlesDataContext from '@/src/services/articleDataContext/articleDataContext';
+
+import ArticleList from './components/ArticleList';
+import SearchInput from './components/SearchInput';
 
 
 const HomeScreen = () => {
 
+    const {
+        data, 
+        isLoading, 
+        isError, 
+        isRefreshing, 
+        keyword,
+        setKeywordCallback,
+        onRefresh,
+        onRetry,
+    } = useContext(ArticlesDataContext);
+
     return (
-        <SafeAreaProvider style={styles.flex1}>
-            
-        </SafeAreaProvider>
+        <SafeAreaView style={styles.flex1}>
+            <SearchInput value={keyword} setValue={setKeywordCallback}/>
+            <ArticleList 
+                data={data}
+                isError={isError}
+                isLoading={isLoading}
+                isRefreshing={isRefreshing}
+                searchKeyword={keyword}
+                onRefresh={onRefresh}
+                onRetry={onRetry}
+            />
+        </SafeAreaView>
     )
 }
 
